@@ -1,0 +1,12 @@
+create new game/;
+app WILL have/1 screen;
+create new screen/ "Clicker_Screen"
+create new display area/ "Score_Area"
+create new button/ "Click Me As Fast As You Can!"
+create new variable/ Score
+set timer
+      "10 seconds"
+on event
+      button:/ "Click Me As Fast As You Can!" clicked
+              Variable:/ Score = Score + 1;/set text "Score_Area"
+ALL of this/will be HIDDEN:Until:/timer ends;
