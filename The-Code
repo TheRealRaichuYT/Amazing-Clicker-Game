@@ -1,5 +1,8 @@
 create new game/;
-app WILL have/1 screen;
+app WILL have/2 screens;
+Code FOR/first screen/;
+create new tab/ "Clicking Area"
+create new tab/ "Auto Clicker"
 create new screen/ "Clicker_Screen"
 create new display area/ "Score_Area"
 create new button/ "Click Me As Fast As You Can!"
@@ -9,4 +12,15 @@ set timer
 on event
       button:/ "Click Me As Fast As You Can!" clicked
               Variable:/ Score = Score + 1;/set text "Score_Area"
-ALL of this/will be HIDDEN:Until:/timer ends;
+ALL of this/will be HIDDEN:Until:/timer ends;/
+on event
+      tab:/ "Auto Clicker" clicked
+              set screen:/ "Screen2"
+Code FOR/second screen/;
+create new button/ "Get Auto Clicker!"
+on event
+      button:/ "Get Auto Clicker!" clicked
+              create new text/ "Auto Clicker Earned!"/ Delete button:/ "Get Auto Clicker!"
+on event
+      tab:/ "Clicking Area" clicked
+              set screen:/ "Screen1"
